@@ -1,21 +1,24 @@
 #include <iostream>
-// TO DO: Include a library with a function that can hash a string
+#include <string>
 using namespace std;
 
 int main() 
 {
     int tries = 3;
-    string hashedPassword;
+    hash<string> hasher;
+    size_t hashedPassword;
     string input;
-    string hashedInput;
+    size_t hashedInput;
 
-    // TO DO: hash a string here and assign it to "hashedPassword"
+    hashedPassword = hasher("GoogleSux4445");
+
+    // cout << "Hash value: " << hashedPassword << endl; // Used for testing
 
     while(tries > 0)
     {
         cout << "Password: ";
         cin >> input;
-        // TO DO: Hash the input
+        hashedInput = hasher(input);
 
         if(hashedInput == hashedPassword)
         {
